@@ -18,10 +18,12 @@ const INSTAGRAM_URL = "https://instagram.com/barbeariabodevan";
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Rua+Santo+Ant%C3%B4nio,+195,+S%C3%A3o+Tomaz,+Belo+Horizonte,+MG,+31741-150";
 const PHONE_DISPLAY = "+55 31 9963-3339";
-const PHONE_TEL = "https://wa.me/553199633339";
+const WHATSAPP_MESSAGE =
+  "Olá! Encontrei a Barbearia Bodevan pelo site e gostaria de saber mais sobre os serviços e horários disponíveis. ✂️";
+const PHONE_TEL = `https://wa.me/553199633339?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 const SITE_URL = "https://bodevan-s-barber-lounge.vercel.app/";
-const OG_IMAGE = "https://bodevan-s-barber-lounge.vercel.app/images/og-bodevan.jpg";
+const OG_IMAGE = "https://bodevan-s-barber-lounge.vercel.app/images/bodevan-image-5.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -42,8 +44,8 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
       { property: "og:image", content: OG_IMAGE },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
+      { property: "og:image:width", content: "640" },
+      { property: "og:image:height", content: "640" },
       { property: "og:image:alt", content: "Logo da Barbearia Bodevan" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Barbearia Bodevan | Belo Horizonte" },
@@ -54,7 +56,11 @@ export const Route = createFileRoute("/")({
       },
       { name: "twitter:image", content: OG_IMAGE },
     ],
-    links: [{ rel: "canonical", href: SITE_URL }],
+    links: [
+      { rel: "canonical", href: SITE_URL },
+      { rel: "preload", as: "image", href: "/images/bodevan-image-5.jpg" },
+      { rel: "preload", as: "image", href: "/images/bodevan-image.jpg" },
+    ],
   }),
 });
 
@@ -270,7 +276,7 @@ function Index() {
           <p className="reveal text-xs font-semibold uppercase tracking-[0.35em] text-primary">
             Barbearia Bodevan • Since 2023
           </p>
-          <h1 className="reveal mt-6 font-display text-[17vw] leading-[0.9] sm:text-7xl md:text-8xl lg:text-9xl">
+          <h1 className="reveal mt-6 font-display text-[clamp(2.5rem,13vw,4.5rem)] leading-[0.9] sm:text-7xl md:text-8xl lg:text-9xl">
             Encontre a sua
             <br />
             <span className="text-primary">melhor versão.</span>
