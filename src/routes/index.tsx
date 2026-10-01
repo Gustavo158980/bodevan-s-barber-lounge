@@ -11,25 +11,20 @@ import {
   Scissors,
 } from "lucide-react";
 
-import logoAsset from "@/assets/bodevan-image-5.jpg.asset.json";
-import chairAsset from "@/assets/bodevan-image.jpg.asset.json";
-import sofaAsset from "@/assets/bodevan-image-2.jpg.asset.json";
-import chair2Asset from "@/assets/bodevan-image-3.jpg.asset.json";
-import loungeAsset from "@/assets/bodevan-image-4.jpg.asset.json";
 
 const BOOKSY_URL =
   "https://booksy.com/pt-br/326046_barbearia-bodevan_barbearias_459592_belo-horizonte";
-const INSTAGRAM_URL = "http://instagram.com/barbeariabodevan";
+const INSTAGRAM_URL = "https://instagram.com/barbeariabodevan";
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Rua+Santo+Ant%C3%B4nio,+195,+S%C3%A3o+Tomaz,+Belo+Horizonte,+MG,+31741-150";
-const PHONE_DISPLAY = "(31) 99963-3339";
-const PHONE_TEL = "tel:+5531999633339";
+const PHONE_DISPLAY = "+55 31 9963-3339";
+const PHONE_TEL = "https://wa.me/553199633339";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Barbearia Bodevan — Barba, cabelo e bigode | Belo Horizonte" },
+      { title: "Barbearia Bodevan | Belo Horizonte" },
       {
         name: "description",
         content:
@@ -157,7 +152,7 @@ function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8">
         <a href="#inicio" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={"/images/bodevan-image-5.jpg"}
             alt="Logo Barbearia Bodevan"
             className="h-10 w-10 rounded-full object-cover md:h-12 md:w-12"
           />
@@ -249,7 +244,7 @@ function Index() {
       <section id="inicio" className="relative flex min-h-svh items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={chairAsset.url}
+            src={"/images/bodevan-image.jpg"}
             alt="Cadeira de barbeiro da Barbearia Bodevan"
             className="h-full w-full object-cover"
           />
@@ -436,7 +431,7 @@ function Index() {
           <div className="reveal relative order-2 lg:order-1">
             <div className="overflow-hidden border border-border">
               <img
-                src={loungeAsset.url}
+                src={"/images/bodevan-image-4.jpg"}
                 alt="Interior da Barbearia Bodevan"
                 className="img-editorial aspect-[4/5] w-full object-cover"
               />
@@ -476,16 +471,16 @@ function Index() {
 
         <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           <div className="reveal col-span-2 row-span-2 overflow-hidden border border-border">
-            <img src={chairAsset.url} alt="Cadeira de barbeiro" className="img-editorial h-full w-full object-cover" />
+            <img src={"/images/bodevan-image.jpg"} alt="Cadeira de barbeiro" className="img-editorial h-full w-full object-cover" />
           </div>
           <div className="reveal overflow-hidden border border-border">
-            <img src={sofaAsset.url} alt="Sofá da recepção" className="img-editorial aspect-square w-full object-cover" />
+            <img src={"/images/bodevan-image-2.jpg"} alt="Sofá da recepção" className="img-editorial aspect-square w-full object-cover" />
           </div>
           <div className="reveal overflow-hidden border border-border">
-            <img src={chair2Asset.url} alt="Área de atendimento" className="img-editorial aspect-square w-full object-cover" />
+            <img src={"/images/bodevan-image-3.jpg"} alt="Área de atendimento" className="img-editorial aspect-square w-full object-cover" />
           </div>
           <div className="reveal col-span-2 overflow-hidden border border-border">
-            <img src={loungeAsset.url} alt="Espaço da barbearia" className="img-editorial aspect-[2/1] w-full object-cover" />
+            <img src={"/images/bodevan-image-4.jpg"} alt="Espaço da barbearia" className="img-editorial aspect-[2/1] w-full object-cover" />
           </div>
         </div>
       </section>
@@ -509,7 +504,7 @@ function Index() {
               </p>
               <p className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="h-5 w-5 shrink-0 text-primary" />
-                <a href={PHONE_TEL} className="transition-colors hover:text-foreground">
+                <a href={PHONE_TEL} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
                   {PHONE_DISPLAY}
                 </a>
               </p>
@@ -560,7 +555,7 @@ function Index() {
           <div className="grid gap-12 md:grid-cols-3">
             <div>
               <div className="flex items-center gap-3">
-                <img src={logoAsset.url} alt="Logo Barbearia Bodevan" className="h-12 w-12 rounded-full object-cover" />
+                <img src={"/images/bodevan-image-5.jpg"} alt="Logo Barbearia Bodevan" className="h-12 w-12 rounded-full object-cover" />
                 <span className="font-display text-2xl tracking-[0.12em]">BODEVAN</span>
               </div>
               <p className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
@@ -585,7 +580,7 @@ function Index() {
               <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-foreground">
                 <Scissors className="h-4 w-4 text-primary" /> Agendar pelo Booksy
               </a>
-              <a href={PHONE_TEL} className="flex items-center gap-2 transition-colors hover:text-foreground">
+              <a href={PHONE_TEL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-foreground">
                 <Phone className="h-4 w-4 text-primary" /> {PHONE_DISPLAY}
               </a>
               <span className="flex items-start gap-2">
