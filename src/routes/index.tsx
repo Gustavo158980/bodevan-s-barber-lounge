@@ -20,6 +20,9 @@ const MAPS_URL =
 const PHONE_DISPLAY = "+55 31 9963-3339";
 const PHONE_TEL = "https://wa.me/553199633339";
 
+const SITE_URL = "https://bodevan-s-barber-lounge.vercel.app/";
+const OG_IMAGE = "https://bodevan-s-barber-lounge.vercel.app/images/og-bodevan.jpg";
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -30,17 +33,28 @@ export const Route = createFileRoute("/")({
         content:
           "Barbearia Bodevan — since 2023. Corte masculino, barboterapia, combos e planos mensais na Rua Santo Antônio, 195, São Tomaz, Belo Horizonte — MG. Agende pelo Booksy.",
       },
-      { property: "og:title", content: "Barbearia Bodevan — Barbershop Since 2023" },
+      { property: "og:title", content: "Barbearia Bodevan | Belo Horizonte" },
       {
         property: "og:description",
         content:
           "Encontre a sua melhor versão. Barba, cabelo e bigode em Belo Horizonte — MG. Agende seu horário pelo Booksy.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Logo da Barbearia Bodevan" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Barbearia Bodevan | Belo Horizonte" },
+      {
+        name: "twitter:description",
+        content:
+          "Encontre a sua melhor versão. Barba, cabelo e bigode em Belo Horizonte — MG. Agende seu horário pelo Booksy.",
+      },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: SITE_URL }],
   }),
 });
 
