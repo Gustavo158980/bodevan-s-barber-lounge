@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Barbearia Bodevan — Barba, cabelo e bigode | Belo Horizonte" },
+      { title: "Barbearia Bodevan | Belo Horizonte" },
       {
         name: "description",
         content:
