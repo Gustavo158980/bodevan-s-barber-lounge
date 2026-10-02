@@ -266,7 +266,7 @@ function Index() {
           <img
             src={"/images/bodevan-image.jpg"}
             alt="Cadeira de barbeiro da Barbearia Bodevan"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-[22%_center] md:object-[50%_50%]"
           />
           <div className="absolute inset-0 bg-background/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/60" />
