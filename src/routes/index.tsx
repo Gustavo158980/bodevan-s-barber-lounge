@@ -1,3 +1,8 @@
+import imgHero from "@/assets/bodevan-image.jpg";
+import img2 from "@/assets/bodevan-image-2.jpg";
+import img3 from "@/assets/bodevan-image-3.jpg";
+import img4 from "@/assets/bodevan-image-4.jpg";
+import imgLogo from "@/assets/bodevan-image-5.jpg";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -58,8 +63,8 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: SITE_URL },
-      { rel: "preload", as: "image", href: "/images/bodevan-image-5.jpg" },
-      { rel: "preload", as: "image", href: "/images/bodevan-image.jpg" },
+      { rel: "preload", as: "image", href: imgLogo },
+      { rel: "preload", as: "image", href: imgHero },
     ],
   }),
 });
@@ -172,7 +177,7 @@ function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-8">
         <a href="#inicio" className="flex items-center gap-3">
           <img
-            src={"/images/bodevan-image-5.jpg"}
+            src={imgLogo}
             alt="Logo Barbearia Bodevan"
             className="h-10 w-10 rounded-full object-cover md:h-12 md:w-12"
           />
@@ -264,7 +269,7 @@ function Index() {
       <section id="inicio" className="relative flex min-h-svh items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={"/images/bodevan-image.jpg"}
+            src={imgHero}
             alt="Cadeira de barbeiro da Barbearia Bodevan"
             className="h-full w-full object-cover object-[22%_center] md:object-[50%_50%]"
           />
@@ -451,7 +456,7 @@ function Index() {
           <div className="reveal relative order-2 lg:order-1">
             <div className="overflow-hidden border border-border">
               <img
-                src={"/images/bodevan-image-4.jpg"}
+                src={img4}
                 alt="Interior da Barbearia Bodevan"
                 className="img-editorial aspect-[4/5] w-full object-cover"
               />
@@ -491,16 +496,16 @@ function Index() {
 
         <div className="mt-14 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           <div className="reveal col-span-2 row-span-2 overflow-hidden border border-border">
-            <img src={"/images/bodevan-image.jpg"} alt="Cadeira de barbeiro" className="img-editorial h-full w-full object-cover" />
+            <img src={imgHero} alt="Cadeira de barbeiro" className="img-editorial h-full w-full object-cover" />
           </div>
           <div className="reveal overflow-hidden border border-border">
-            <img src={"/images/bodevan-image-2.jpg"} alt="Sofá da recepção" className="img-editorial aspect-square w-full object-cover" />
+            <img src={img2} alt="Sofá da recepção" className="img-editorial aspect-square w-full object-cover" />
           </div>
           <div className="reveal overflow-hidden border border-border">
-            <img src={"/images/bodevan-image-3.jpg"} alt="Área de atendimento" className="img-editorial aspect-square w-full object-cover" />
+            <img src={img3} alt="Área de atendimento" className="img-editorial aspect-square w-full object-cover" />
           </div>
           <div className="reveal col-span-2 overflow-hidden border border-border">
-            <img src={"/images/bodevan-image-4.jpg"} alt="Espaço da barbearia" className="img-editorial aspect-[2/1] w-full object-cover" />
+            <img src={img4} alt="Espaço da barbearia" className="img-editorial aspect-[2/1] w-full object-cover" />
           </div>
         </div>
       </section>
@@ -575,7 +580,7 @@ function Index() {
           <div className="grid gap-12 md:grid-cols-3">
             <div>
               <div className="flex items-center gap-3">
-                <img src={"/images/bodevan-image-5.jpg"} alt="Logo Barbearia Bodevan" className="h-12 w-12 rounded-full object-cover" />
+                <img src={imgLogo} alt="Logo Barbearia Bodevan" className="h-12 w-12 rounded-full object-cover" />
                 <span className="font-display text-2xl tracking-[0.12em]">BODEVAN</span>
               </div>
               <p className="mt-4 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
